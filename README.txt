@@ -1,5 +1,5 @@
 # SecopsTools
-This repo contains powershel scripts that can be used on a day to day basis by security analysts. 
+This repo contains Powershell scripts that can be used on a day to day basis by security analysts. 
 
 
 #Use
