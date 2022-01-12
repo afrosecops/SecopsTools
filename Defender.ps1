@@ -1,14 +1,14 @@
 #Create a log file and append all changes to it
 Start-Transcript -Append "C:\DefAVInstallLog.txt"
 
-#Step 1: Check if Anti-Malware is installed
+#Step 1: Check if Anti-Malware is installed by checking registry
 $AmCheck = Test-Path -Path "HKLM:\Software\Microsoft\Windows Defender" -Debug -Verbose
 
 #Step 2: Start install process if not installed
 If ("$AmCheck" -eq "False" ){
 
 Write-Output "Anti-Malware not installed. Launching installation wizard"
-Invoke-item "Path of executable file" -Debug -Verbose
+Invoke-item "Path of install file" -Debug -Verbose
 
 #Confirm that the services are running after install
     $ServCheck1 = Get-Service -Name WinDefend -Debug -Verbose # Microsoft Defender Antivirus Service 
