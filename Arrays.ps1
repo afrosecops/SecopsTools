@@ -11,6 +11,3 @@ $arr = $inp2.ToCharArray()
 
 $sec = $arr | Select-Object -Unique
 $sec
-#$dups = Compare-Object -ReferenceObject $sec -DifferenceObject $arr
-
-#$dups
